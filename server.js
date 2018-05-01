@@ -1,5 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var path = require("path");
 
 var app = express();
 var PORT = 3000;
@@ -14,9 +15,9 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // serve up files in /public folder
-// app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 
 app.listen(PORT, function() {
   console.log("Server listening on: http://localhost:" + PORT);
-});
+}); 
