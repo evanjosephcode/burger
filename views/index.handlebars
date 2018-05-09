@@ -1,14 +1,26 @@
 <h1>Wut, Burgers</h1>
 
+<div class="noteaten">
 {{#each burgers}}
   {{!-- <p>{{id}}: {{burger_name}}</p> --}}
   {{!-- <p>Devoured?: {{devoured}}</p> --}}
   {{#unless devoured}}
     <p>{{id}}: {{burger_name}}</p>
-    <button type="submit" id="mofo">EAT THAT MOFO</button>
+    <button type="submit" class="eatburger" data-id="{{id}}">EAT THAT MOFO</button>
   {{/unless}}
-  <hr>
 {{/each}}
+<hr>
+</div>
+
+<div class="eaten">
+{{#each burgers}}
+  {{#if devoured}}
+    <p>{{id}}: {{burger_name}}</p>
+    <button type="submit" class="eatburger" data-id="{{id}}">EAT THAT MOFO</button>
+  {{/if}}
+{{/each}}
+<hr>
+</div>
 
 
 <form class="create-form">

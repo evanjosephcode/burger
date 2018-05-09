@@ -24,10 +24,17 @@ router.post("/api/burgers", function (req, res) {
   burger.insertOne(req.body.burger, function (data) {
     console.log(data);
     res.json({});
-    // res.redirect("/");  
-
   })
 });
+
+router.put("/api/burgers/:id", function (req, res) {
+  burger.updateOne({devoured: 1}, "id=" + req.params.id, function (data) {
+    res.json({});
+  })
+
+})
+
+
 
 
 
