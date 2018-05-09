@@ -1,21 +1,22 @@
 <h1>Wut, Burgers</h1>
 
 {{#each burgers}}
-  <p>Burger: {{burger_name}}</p>
-  <p>Devoured?: {{devoured}}</p>
+  {{!-- <p>{{id}}: {{burger_name}}</p> --}}
+  {{!-- <p>Devoured?: {{devoured}}</p> --}}
   {{#unless devoured}}
-    <button type="submit">EAT THAT MOFO</button>
+    <p>{{id}}: {{burger_name}}</p>
+    <button type="submit" id="mofo">EAT THAT MOFO</button>
   {{/unless}}
   <hr>
 {{/each}}
 
 
-<form class="create-form" method="POST" action="">
+<form class="create-form">
 
   <div class="form-group">
     <label for="auth">Burger:</label>
     <input type="text" id="auth" name="burger">
   </div>
 
-  <button type="submit">Submit Burger</button>
+  <button type="submit" id="addburger">Submit Burger</button>
 </form>

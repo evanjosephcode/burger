@@ -10,6 +10,9 @@ VALUES ("Burger's Burger", false);
 INSERT INTO burgers (burger_name, devoured)
 VALUES ("The People's Berg.. err..", true);
 
+INSERT INTO burgers (burger_name, devoured)
+VALUES ("Charlie's Burger", false);
+
 
 
 
