@@ -7,16 +7,7 @@ var router = require("./controllers/burgers_controller.js");
 var app = express();
 var PORT = 3000;
 
-// if (process.env.JAWSDB_URL) {
-//   connection = mysql.createConnection(process.env.JAWSDB_URL);
-// } else {
-//   connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: '',
-//     database: 'burgers_db' 
-//   })
-// }
+
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
