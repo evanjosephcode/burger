@@ -5,6 +5,7 @@
   {{!-- <p>{{id}}: {{burger_name}}</p> --}}
   {{!-- <p>Devoured?: {{devoured}}</p> --}}
   {{#unless devoured}}
+    <hr>
     <p>{{id}}: {{burger_name}}</p>
     <button type="submit" class="eatburger" data-id="{{id}}">EAT THAT BURGER BEAST</button>
   {{/unless}}
@@ -15,6 +16,7 @@
 <div class="eaten">
 {{#each burgers}}
   {{#if devoured}}
+    <hr>
     <p>{{id}}: {{burger_name}}</p>
   {{/if}}
 {{/each}}
