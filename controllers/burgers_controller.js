@@ -8,7 +8,6 @@ router.get("/", function (req, res) {
     burgers: []
   };
   burger.selectAll(function (data) {
-    // console.log(data);
     for (var i = 0; i < data.length; i++) {
       hbsObject.burgers.push({
         id: data[i].id,
@@ -22,7 +21,6 @@ router.get("/", function (req, res) {
 
 router.post("/api/burgers", function (req, res) {
   burger.insertOne(req.body.burger, function (data) {
-    console.log(data);
     res.json({});
   })
 });
